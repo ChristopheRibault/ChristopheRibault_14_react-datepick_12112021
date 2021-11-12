@@ -4,8 +4,7 @@ import { DatePicker } from './lib';
 
 const App = () => (
   <div>
-    <h1>Hello React</h1>
-    <DatePicker />
+    <DatePicker selected={new Date(2021, 0, 29)} onChange={console.log} />
   </div>
 );
 
