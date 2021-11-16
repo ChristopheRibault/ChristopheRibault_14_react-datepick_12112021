@@ -1,6 +1,6 @@
 {
-  "name": "react-datepick",
-  "version": "0.1.0",
+  "name": "@tof28/react-datepicker",
+  "version": "0.2.1",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -13,26 +13,31 @@
   },
   "dependencies": {
     "date-fns": "^2.25.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "@babel/runtime": "^7.15.4"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@rollup/plugin-babel": "^5.0.2",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "babel-cli": "^6.26.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3"
+    "rollup": "^2.13.1",
+    "rollup-plugin-filesize": "^9.0.0",
+    "rollup-plugin-postcss": "^3.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "npx rollup -c"
   },
   "eslintConfig": {
     "extends": [
