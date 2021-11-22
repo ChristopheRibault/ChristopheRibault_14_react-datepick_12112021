@@ -39,7 +39,7 @@ const StyledDate = styled.div`
   }
 `;
 
-const Calendar = function({ selectedDate, dates, onChange }) {
+const Calendar = function({ selectedDate, dates, onSelectDate }) {
   const weekDays = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ];
 
   return (
@@ -57,7 +57,7 @@ const Calendar = function({ selectedDate, dates, onChange }) {
           <StyledDate
             key={date.toString()}
             className={className}
-            onClick={() => onChange(date)}
+            onClick={() => onSelectDate(date)}
           >{date.getDate()}</StyledDate>
           );
       })}
